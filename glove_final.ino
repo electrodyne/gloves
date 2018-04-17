@@ -9,7 +9,7 @@
     #include "Wire.h"
 #endif
 //#define DEBUG
-#define DEBUG_FLEX
+//#define DEBUG_FLEX
 
 MPU6050 accelgyro;
 int16_t ax, ay, az;
@@ -111,11 +111,11 @@ void loop() {
         analogArray[4] >= 24 && analogArray[4] <= 29)
         {serial_send("j");}
     else if (
-        analogArray[0] >= 45 && analogArray[0] <= 57 &&
-        analogArray[1] >= 45 && analogArray[1] <= 57 &&
-        analogArray[2] >= 45 && analogArray[2] <= 57 &&
-        analogArray[3] >= 45 && analogArray[3] <= 57 &&
-        analogArray[4] >= 20 && analogArray[4] <= 25)
+        analogArray[0] >= 40 && analogArray[0] <= 45 &&
+        analogArray[1] >= 30 && analogArray[1] <= 36 &&
+        analogArray[2] >= 41 && analogArray[2] <= 47 &&
+        analogArray[3] >= 40 && analogArray[3] <= 46 &&
+        analogArray[4] >= 20 && analogArray[4] <= 24)
         {
           cMillis = millis();
           
